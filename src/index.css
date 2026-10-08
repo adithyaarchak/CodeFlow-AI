@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer utilities {
+    .animate-in {
+        animation-fill-mode: both;
+    }
+
+    .slide-in-from-bottom {
+        animation-name: slideInFromBottom;   /* typo fixed */
+    }
+
+    .slide-in-from-top {
+        animation-name: slideInFromTop;   /* typo fixed */
+    }
+
+    .anim-duration-200 {                  /* renamed, no clash */
+        animation-duration: 200ms;
+    }
+
+    .anim-duration-300 {                  /* renamed, no clash */
+        animation-duration: 300ms;
+    }
+
+    .anim-duration-700 {                  /* renamed, no clash */
+        animation-duration: 700ms;
+    }
+
+    .anim-delay-100 {
+        animation-delay: 100ms;
+    }
+
+    .anim-delay-200 {
+        animation-delay: 200ms;
+    }
+
+    .anim-delay-300 {
+        animation-delay: 300ms;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* used in right side content of the webpage from sliding from mobile to laptop */
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
